@@ -55,6 +55,10 @@ export class FrameTestingScript extends Component {
         this.setAddress(e.message);
       });
   }
+  async onAddWarpCast() {
+    console.log("Add WarpCast");
+    await window?.FrameSdk?.actions?.addFrame();
+  }
   setAddress(address: string) {
     this.addresstext.string = address;
   }
